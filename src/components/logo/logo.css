@@ -1,0 +1,12 @@
+.logoPosition {
+    display: flex;
+    justify-content:flex-start  ;   
+
+}
+
+.logo {
+    display: flex;
+    margin-left: 0;
+    height: 10%;
+    width: 10%;
+    }
