@@ -20,7 +20,7 @@ class App extends Component {
     imageURL:'',
     box:{},
     route: 'signin',
-    isSignedIn: true,
+    isSignedIn: false,
     }
   }
 
