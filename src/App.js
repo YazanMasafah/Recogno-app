@@ -24,6 +24,12 @@ class App extends Component {
     }
   }
 
+  componentDidMount(){
+    fetch('http://localhost:4000/')
+    .then(response => response.json())
+    .then(console.log)
+  }
+
 calculateFaceLocation = (data) => {
   const face = data.outputs[0].data.regions[0].region_info.bounding_box;
   const image = document.getElementById('inputimage');
@@ -58,11 +64,9 @@ onSubmit = () => {
   onRouteChange = (route) => {
     if (route === 'signout'){
       this.setState({isSignedIn: false})
-      console.log('route is signout')
-    } else if (route === 'home') {
+      } else if (route === 'home') {
       this.setState({isSignedIn: true})
-      console.log('route is home') 
-    }
+      }
     this.setState({route: route});
   }
 
